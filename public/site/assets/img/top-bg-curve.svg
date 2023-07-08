@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1866.8 708" style="enable-background:new 0 0 1866.8 708;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);fill-rule:evenodd;clip-rule:evenodd;fill:#A3C12F;fill-opacity:0.6;}
+	.st1{clip-path:url(#SVGID_2_);fill-rule:evenodd;clip-rule:evenodd;fill:url(#Combined-Shape-Copy_1_);}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="1866.7" height="708"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<path id="Combined-Shape" class="st0" d="M2046.5,0c-93,472-313.9,708-662.7,708c-302.5,0-595.3-177.5-878.2-532.6l0,0
+		c21.9,13.9,42.3,30.8,61.2,50.5l0,0l0,0c231.1,265.7,469.5,398.6,715.2,398.6l0,0l9.2-0.1c302.3-4.1,494.1-212.3,575.2-624.4l0,0
+		H2046.5z"/>
+	
+		<linearGradient id="Combined-Shape-Copy_1_" gradientUnits="userSpaceOnUse" x1="991.596" y1="391.396" x2="991.596" y2="390.506" gradientTransform="matrix(1881.0791 0 0 -624.5205 -1864344.375 244503.5156)">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+	</linearGradient>
+	<path id="Combined-Shape-Copy" class="st1" d="M542.5,0L542.5,0l1324.2,0c-81.2,412.2-272.9,620.3-575.2,624.4l-9.2,0.1
+		c-245.8,0-484.2-132.9-715.2-398.6l0,0C449.4,103.1,274,92.8,40.8,195.1c-5,2.2-11,5.3-17.1,8.5l-1.5,0.8c-0.5,0.3-1,0.5-1.5,0.8
+		l-2.2,1.2c-16.8,9-33.2,17.6-32.9,11.4C-7.1,89.9-3.5,17.3-3.5,0H542.5z"/>
+</g>
+</svg>

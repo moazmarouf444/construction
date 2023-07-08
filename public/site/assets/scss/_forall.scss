@@ -1,0 +1,758 @@
+
+// transitions
+@mixin transition($property) {
+    -webkit-transition: $property;
+    -ms-transition: $property;
+    transition: $property;
+}
+
+.btn-lang{
+    position: relative;
+    background: #eeeeee;
+    color: #333;
+    padding: 10px 20px 6px 20px;
+    display: block;
+    line-height: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    &:after{
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        position: absolute;
+        top: 3px;
+        right: -10px;
+        content: '';
+        border-style: solid;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #eeeeee;
+    }
+}
+
+.FreeImg img{
+    width: auto !important;
+}
+// MainSlider
+.black-trans-box{
+    position: relative;
+    background: rgba(45, 33, 34, 0.5);
+    padding:30px 15px;
+
+    .box-fly-title{
+        position: absolute;
+        font-weight: 600;
+        top: -20px;
+        left: 15px;
+        color: #fff;
+        margin: 0;
+        padding: 0 15px;
+        font-size: 14px !important;
+        background-color: var(--color-primary);
+    }
+    &.text-center{
+        .box-fly-title {
+            display: inline-block;
+            position: static;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+.ltr{
+    direction: ltr;
+}
+// Box Light for latest posts
+.box-light{
+    background-color: var(--color-lighter);
+    border:rgba(0,0,0,0.1) solid 1px;
+    border-radius: 10px;
+    position: relative;
+    .box-fly-title{
+        background: #fff;
+        border:rgba(0,0,0,0.1) solid 1px;
+        border-radius: 100px;
+        position: relative;
+        margin: 0 auto;
+        padding: 6px 15px;
+        top: -15px;
+    }
+}
+.iconbox.iconbox-filled-hover:hover{
+    .box-light{
+        background-color: var(--color-secondary);
+        border-color: #fff;
+        .box-fly-title{
+            background-color: var(--color-secondary);
+            border-color: #fff;
+        }
+
+        .links-list{
+            li a{
+                border-bottom-color: rgba(255, 255, 255, 0.2);
+                &:hover{
+                    background: rgba(255, 255, 255, 0.1) !important;
+                }
+            }
+        }
+
+    }
+}
+.box-top-logo{
+    position: relative;
+    z-index: 9;
+    background: #fff;
+    display: flex;
+    height: 140px;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+    }
+}
+.links-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li{
+        list-style: none;
+        a{
+            display: block;
+            border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
+            padding:10px 15px;
+            color: #333;
+            &:hover{
+                color: var(--color-primary);
+            }
+        }
+        &:last-child{
+            a{
+                border-bottom:0;
+            }
+
+        }
+    }
+}
+
+ul.pagination li{
+    margin: 0;
+    & a:hover{
+        background: var(--color-secondary);
+        color: #fff;
+    }
+    .page-numbers{
+        padding: 5px 15px;
+        border-radius: 5px;
+        &.current{
+            background-color: var(--color-primary);
+            color: #fff;
+        }
+    }
+}
+.btn-light-green{
+    background: rgba(92,188,170,0.15);
+    color: #5CBCAA;
+}
+
+.pattern1{
+    background-image: url("../img/light-pattern-bg.png");
+    background-repeat: repeat;
+    background-position: center;
+}
+
+
+
+// =================================================================
+// Side menu custom style
+// =================================================================
+
+// search style
+.MobMainSearch-wrap{
+    @include transition( all .3s ease-in-out);
+}
+.backFromSearch{
+    display: none;
+    position: absolute;
+    font-weight: 600;
+    z-index: 9;
+}
+.backFromSearch a, .backFromSearch span{
+    display: block;
+    line-height: 62px;
+}
+
+.HeaderDark .backFromSearch a{
+    color: #fff;
+}
+.backFromSearch a{
+    padding: 0 15px;
+    display: block;
+}
+.backFromSearch i{
+    font-size:18px;
+    color: #333;
+    display: block;
+}
+.mainSearch-visible .backFromSearch{
+    display: block;
+}
+
+
+.mainSearch-visible .MobMainSearch-wrap{
+    padding-right: 65px;
+}
+ .backFromSearch{
+    right: 0;
+}
+.HeadermainSearchTrigger .backFromSearch{
+    display: none;
+}
+.android.mainSearch-visible .MobMainSearch .form-control{
+    padding-left: 50px;
+}
+.android.mainSearch-visible .MobMainSearch .mainSearch-L-Ico{
+    display: none;
+}
+.android .backFromSearch{
+    left: 15px;
+}
+
+ .backFromSearch i, .android .backFromSearch span{
+    display: none;
+}
+
+
+
+
+//  Mobile Header ==========================================================================
+#MobHeader{
+    background: #fff;
+    //border-bottom: var(--bg-light) solid 1px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+}
+#MobHeader.MobHeaderTrans .MainSearchInput, #MobHeader.MobHeaderTrans .MainSearchInput:focus {
+    background: var(--bg-light);
+}
+
+
+.MobHeaderFixed{
+    position: relative;
+    z-index: 99999 !important;
+    width: 100%;
+    //@include transition( all 0.5s ease-in-out);
+}
+
+.SticThis{
+    z-index: 99999 !important;
+}
+
+//  Icons FIX's
+
+
+.headerIcosizeFix:before{
+    font-size: 1.4rem;
+}
+
+.HeaderUp .MobHeaderFixed{
+    top:-52px;
+}
+.HeaderTop{
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 62px;
+
+}
+
+.headerTop-menu{
+    display: flex;
+    align-items: center;
+}
+// Header dark and main BG
+.HeaderTop.HeaderDark{
+    border-bottom: 0 !important;
+}
+.HeaderTop.HeaderDark .MobHeader-link{
+    color: #fff !important;
+}
+.HeaderTop.HeaderDark .logo-dark, .logo-light{
+    display: none;
+}
+.HeaderTop.HeaderDark .logo-light{
+    display: block;
+}
+.MainSearchInput, .MainSearchInput:focus{
+    background: #fff;
+}
+.HeaderBottom.WBg .MainSearchInput{
+    background: var(--bg-light);
+}
+.WBg .HeaderTop{
+    border-bottom:var(--bg-light) solid 1px;
+}
+
+
+.MobHeader-link {
+    line-height: 52px;
+}
+.MobHeader-ico{
+    height: 100%;
+    width: 45px;
+    text-align: center;
+    position: relative;
+}
+i.headerIcosizeFix {
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+}
+.MobHeader-noti{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 18px;
+    height: 18px;
+    background: #F75F1D;
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+.tabbar .MobHeader-noti {
+    padding-top: 0;
+    left: 50%;
+    top: 5px;
+    margin-left: -20px;
+}
+//a.mainMenuTrigger {
+//  margin-top: -3px !important;
+//}
+.MobHeader-ico a{
+    display: block;
+    margin: 0 5px;
+}
+.MobHeader-title{
+    width: 100%;
+    overflow: hidden;
+}
+.MobHeader-title .MobHeader-link{
+    font-size: 1.1rem;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+}
+.MobHeader-title .MobHeader-link strong{
+    font-weight: 700;
+}
+.MobHeader-title .MobHeader-link .logo-img{
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+.MobHeader-title .MobHeader-link .logo-img img{
+    margin: 0 auto;
+}
+.HeaderCenter .MobHeader-link{
+    text-align: center;
+    display: block !important;
+    padding: 0 !important;
+}
+.HeaderCenter>.d-flex{
+    display: -ms-flexbox;
+    display: flex;
+}
+.HeaderCenter .MobHeader-title{
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+}
+.HeaderCenter .MobHeader-LSide, .HeaderCenter .MobHeader-RSide{
+    -ms-flex: 1 1 27%;
+    flex: 1 1 27%;
+}
+.HeaderCenter .MobHeader-RSide .MobHeader-ico:first-child{
+    margin-left: auto;
+}
+.disabled .MobHeader-ico a{
+    display: none !important;
+}
+.MobHeader-link .dropdown-curret{
+    padding-left: 4px;
+    font-size: 14px;
+}
+
+// Main Search
+.HeaderBottom{
+    position: relative;
+    z-index: 99;
+}
+.MobMainSearch{
+    position: relative;
+    width: 100%;
+    padding: 8px 15px;
+}
+.MobMainSearch form{
+    position: relative;
+}
+
+.MobMainSearch .form-control{
+    border:none !important;
+    height: 45px;
+    padding-left: 40px;
+    border-radius: 3px;
+}
+
+.HeaderBottomLight{
+    background: #fff;
+    border-bottom: var(--bg-light) solid 1px;
+}
+.HeaderBottomLight .form-control{
+    background: var(--bg-light);
+}
+
+.mainSearch-L-Ico{
+    position: absolute;
+    display: block;
+    width: 44px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+}
+.IcoSearch{
+    visibility: visible;
+    pointer-events: none;
+    font-size: 14px;
+    line-height: 42px;
+    padding-top: 3px;
+}
+.IcoSearchClear{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 42px;
+    right: 0;
+    background: none;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    width: 35px;
+    color: var(--color-link);
+}
+
+.MainSearchInput:not(:valid) ~ .IcoSearchClear {
+    opacity: 0;
+    visibility: hidden;
+}
+
+// Open Search menu
+
+.mainSearch-visible .MobHeaderFixed{
+    top:0 !important;
+    position: fixed !important;
+}
+.mainSearch-visible .tabbar{
+    display: none;
+}
+
+.SearchHistory{
+    display: none;
+    position: relative;
+}
+
+//.RecentSearches{
+//  height: 100vh;
+//  overflow-x: scroll;
+//  -webkit-overflow-scrolling: touch;
+//}
+.SearchHistoryInner{
+    padding-top: 15px;
+}
+.SearchHistoryInner, .ui-autocomplete{
+    background: #fff;
+}
+
+// search style
+.MobMainSearch-wrap{
+    @include transition( all .3s ease-in-out);
+}
+.backFromSearch{
+    display: none;
+    position: absolute;
+    font-weight: 600;
+    z-index: 9;
+}
+.backFromSearch a, .backFromSearch span{
+    display: block;
+    line-height: 62px;
+}
+
+.HeaderDark .backFromSearch a{
+    color: #fff;
+}
+.backFromSearch a{
+    padding: 0 15px;
+    display: block;
+}
+.backFromSearch i{
+    font-size:18px;
+    color: #333;
+    display: block;
+}
+.mainSearch-visible .backFromSearch{
+    display: block;
+}
+
+
+.mainSearch-visible .MobMainSearch-wrap{
+    padding-right: 65px;
+}
+ .backFromSearch{
+    right: 0;
+}
+.HeadermainSearchTrigger .backFromSearch{
+    display: none;
+}
+.android.mainSearch-visible .MobMainSearch .form-control{
+    padding-left: 50px;
+}
+.android.mainSearch-visible .MobMainSearch .mainSearch-L-Ico{
+    display: none;
+}
+.android .backFromSearch{
+    left: 15px;
+}
+
+ .backFromSearch i, .android .backFromSearch span{
+    display: none;
+}
+
+
+
+
+// search style
+.searchActive1 .HeadermainSearchTrigger,
+.searchActive2 .HeadermainSearchTrigger{
+    display: none;
+}
+#PcHeader .sticky-wrapper{
+    max-height: 64px !important;
+}
+
+// search style1
+#MobHeader-sticky-wrapper{
+    position: relative;
+}
+//.mainSearch-visible #MobHeader-sticky-wrapper,
+.mainSearch-visible .searchActive1 .HeaderTop{
+    margin-top: -52px !important;
+}
+
+// search style 2
+
+
+// search style 3
+.searchActive3 .HeaderBottom{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:-100%;
+    z-index: 99999;
+    opacity: 0;
+    @include transition(0);
+
+}
+.searchActive3 .HeaderTop .MobHeader-title{
+    text-align: center;
+}
+.mainSearch-visible .searchActive3 .HeaderBottom {
+    opacity: 1;
+    top:0;
+}
+
+.searchActive3 .HeaderTop {
+    position: relative;
+    @include transition( all .2s ease-in-out);
+}
+.mainSearch-visible .searchActive3 .HeaderTop {
+    opacity: 0;
+}
+
+ .searchActive3 .MobMainSearch-wrap,  .searchActive1 .MobMainSearch-wrap{
+    transition-delay: 0.4s;
+}
+
+.is-sticky>.HeaderTop, .is-sticky .PcHeader-center{
+    border-bottom: 1px solid rgb(225, 230, 234);
+    box-shadow: rgba(0,0,0,0.1) 0 0 2px;
+}
+
+.HalfSec{
+    display: flex;
+    align-items: center;
+
+    .HalfSecImg{
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+        min-height: 500px;
+    }
+    .HalfSecText{
+        width: 50%;
+        padding: 50px 30px;
+    }
+}
+
+
+.SecHalfImg{
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+
+    .HalfSecImg{
+        position: absolute;
+        top:0;
+        height: 100%;
+        width: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .HalfSecText{
+        width: 50%;
+        padding: 50px 30px;
+    }
+
+    &.HalfImgL{
+        .HalfSecImg {
+            left: 0;
+        }
+        .HalfSecText{
+            margin-left: 50%;
+        }
+
+    }
+
+    &.HalfImgR{
+        .HalfSecImg {
+            right: 0;
+        }
+        .HalfSecText{
+            margin-right: 50%;
+        }
+
+    }
+}
+
+.MobMenu.modal.fade{
+    .modal-dialog{
+        height: 100%;
+        margin: 0;
+        max-width: 85%;
+        background: #fff;
+
+        -webkit-transform: translate(25%, 0);
+        -ms-transform: translate(25%, 0);
+        -o-transform: translate(25%, 0);
+        transform: translate(25%, 0);
+    }
+    &.in .modal-dialog{
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    .close{
+        position: absolute;
+        left: 3px;
+        background: #fff;
+        font-size: 29px;
+        top: 15px;
+        color: #333 !important;
+        cursor: pointer;
+    }
+
+    .menu-item-has-children{
+        .nav-item-children{
+            display: none !important;
+        }
+        &.active{
+            background: #eee;
+            .nav-item-children{
+                display: block !important;
+                height: 100% !important;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+    .main-nav > li, .main-nav > li > a{
+        display: block !important;
+    }
+
+    .main-nav > li.active > a:after, .main-nav > li.current-menu-item > a:after, .main-nav > li > a:hover:after{
+        height: 100% !important;
+        background: rgba(38, 191, 169, 0.2);
+    }
+
+}
+
+.EqtedaaSec-mob{
+    background: #2D2122;
+    padding: 15px;
+    a{
+        color: #fff;
+    }
+    ul.nav.main-nav > li > a{
+        color: #fff;
+    }
+}
+.MainSec-mob{
+    .MainSec-mob-logo{
+        padding: 15px;
+        border-bottom: #eee solid 1px;
+        img{
+            display: block;
+            max-width: 240px;
+        }
+    }
+}
+
+html[dir="rtl"] {
+    .mainSearch-visible .MobMainSearch-wrap{
+        padding-right: 0;
+        padding-left: 65px;
+    }
+    .backFromSearch {
+        left: 0;
+        right: auto;
+    }
+
+    .MobMenu{
+        .menu-item-has-children{
+            .txt{
+                display: block;
+            }
+            .submenu-expander{
+                left: 0 !important;
+                right: inherit !important;
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
